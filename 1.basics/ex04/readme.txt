@@ -11,4 +11,3 @@ ex04: 애플리케이션 bundling(번들링)
     - 난독/압축(uglify) 작업
     - 번들
 4. js 모듈뿐만 아니라 다양한 asset(images, css, scss/sass, font)들도 모듈로 취급한다.
-5. 
