@@ -1,7 +1,7 @@
-ex04: css 모듈 번들링
+ex06: image 모듈 번들링
 
 1. 설치 패키지
-    $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader
+    $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader sass-loader node-sass
 
 2. 번들링 환경(webpack.config.js) 설정
     1) entry

@@ -6,12 +6,17 @@ module.exports = {
     output: {
         path: path.resolve("public"),
         filename: "assets/js/bundle.js",
+        assetModuleFilename: "assets/images/[hash][ext]",
     },
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                test: /\.(c|sa|sc)ss$/i,
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+            {
+                test: /\.(png|gif|jp?eg|svg|ico|tif?f|bmp)/i,
+                type: "asset/resource",
             },
         ],
     },

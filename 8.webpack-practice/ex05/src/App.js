@@ -1,4 +1,4 @@
-import "./assets/css/App.css";
+import "./assets/scss/App.scss";
 
 function App() {
     const App = document.createElement("div");
