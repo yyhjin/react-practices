@@ -5,10 +5,7 @@ ex01: 전통적인 DOM 기반의 Application
 ex02: 전통적인 DOM 기반의 Application: 단순하게 파일 분리
 ex03: 전통적인 DOM 기반의 Application: JS module system
 ex04: 애플리케이션 bundling(번들링)
-
-
-
-
-
+ex05: React API 기반의 애플리케이션 리팩토링
+ex06: React JSX 기반의 애플리케이션 리팩토링
 ex07: ex00.cra Recofiguration(내가 직접 설정)
 ex08: JSX tutorial

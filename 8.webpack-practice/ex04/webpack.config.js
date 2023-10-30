@@ -20,6 +20,6 @@ module.exports = {
         port: 9090,
         liveReload: true,
         compress: true,
-        hot: true,
+        hot: false,
     },
 };
