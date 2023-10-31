@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-transform-block-scoping": "^7.23.0",
+    "@babel/plugin-transform-for-of": "^7.22.15",
+    "@babel/plugin-transform-parameters": "^7.22.15"
+  }
+}
