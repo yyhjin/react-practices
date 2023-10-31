@@ -1,5 +1,6 @@
 import React from "react";
 import Clock01 from "./Clock01";
+import Clock02 from "./Clock02";
 
 function Contents(props) {
     return (

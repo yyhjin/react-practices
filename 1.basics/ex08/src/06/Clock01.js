@@ -15,7 +15,7 @@ function Clock01(props) {
     }
 
     let session = "AM";
-    if (hours < 12) {
+    if (hours >= 12) {
         session = "PM";
     }
 
