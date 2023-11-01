@@ -11,22 +11,25 @@ body {
     text-align: center;
 }
 
-ul, ol {
-    list-style-type: none
+ul,
+ol {
+    list-style-type: none;
 }
 
 #root {
-    width: 100%
+    width: 100%;
 }
 
-.App {
+#App {
     width: 300px;
     margin: 5px auto 0 auto;
     background-color: #f2f2f2;
-    border:1px solid #d9d9d9;
+    border: 1px solid #d9d9d9;
     border-radius: 2px;
     padding: 7px;
 }
+
+/* ======= */
 
 .RegisterForm {
     width: 100%;
@@ -37,7 +40,7 @@ ul, ol {
 .RegisterForm input[type="text"],
 .RegisterForm input[type="submit"] {
     display: block;
-    position:absolute;
+    position: absolute;
     outline: none;
     border: 1px solid #d9d9d9;
     padding: 3px;
@@ -47,7 +50,7 @@ ul, ol {
 .RegisterForm .InputFirstName {
     left: 0;
     top: 0;
-    width:80px;
+    width: 80px;
 }
 
 .RegisterForm .InputLastName {
@@ -57,7 +60,7 @@ ul, ol {
 }
 
 .RegisterForm .InputEmail {
-    left:0;
+    left: 0;
     top: 27px;
     width: 237px;
 }
@@ -70,12 +73,12 @@ ul, ol {
     background-color: #fff;
     padding: 5px 0;
     font-weight: bold;
-    color: #846B5C;
+    color: #846b5c;
     cursor: pointer;
 }
 
 .RegisterForm input[type="submit"]:hover {
-     background-color: #eee;
+    background-color: #eee;
 }
 
 .Searchbar {
@@ -90,7 +93,7 @@ ul, ol {
     padding: 5px;
 }
 
-.Searchbar input{
+.Searchbar input {
     outline: none;
 }
 
@@ -136,10 +139,11 @@ ul, ol {
 }
 
 .Emaillist li a:before {
-    content:'X'
+    content: "X";
 }
-.Emaillist li a:hover, a:visited, a:active {
+.Emaillist li a:hover,
+a:visited,
+a:active {
     text-decoration: none;
     color: #fff;
 }
-
