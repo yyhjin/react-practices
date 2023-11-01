@@ -1,11 +1,27 @@
 ex02: Component Styling
-1) inline Styling
+1) inline styling
 2) Normal CSS
-3) CSS Module 1
-4) CSS Module 2
+   - css-loader option: {module: false}
+   - 실행
+     $ npm run debug src=02 css-module=false
+
+3) CSS Module I
+   - css-loader option: {module: true}
+   - 실행
+     $ npm run debug src=03
+
+4) CSS Module II
+   - css-loader option: {module: true}
+   - 실행
+     $ npm run debug src=04
+
 5) SASS & SCSS
-6) CSS in JS: Styled Component
-7) 
+   - css-loader option: {module: true}
+   - 실행
+     $ npm run debug src=04
+     
+6) CSS in JS: Stlyed Component
+7) React Modal
 8) Modal: Material UI
 
 ====================================================================================
