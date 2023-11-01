@@ -9,7 +9,7 @@ ex01: property
 src/01: 함수 컴포넌트의 property
 src/02: Data Flow
 src/03: 클래스 컴포넌트의 property
-src/04: Property Validation
+src/04: Property Validation (prop-types 패키지)
 
 ====================================================================================
 
@@ -17,7 +17,7 @@ src/04: Property Validation
     1)  개발툴
         $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader sass-loader node-sass babel-loader @babel/core @babel/preset-env @babel/preset-react
     2)  라이브러리
-        $ npm i react react-dom
+        $ npm i react react-dom prop-types
 
 2.  설정
     1)  webpack.config.js
