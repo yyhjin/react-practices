@@ -6,11 +6,15 @@ function Kanbanboard(props) {
         return card.status === "ToDo";
     });
     const cardsDoing = data.filter((card) => {
-        card.status === "Doing";
+        return card.status === "Doing";
+    });
+    const cardsDone = data.filter((card) => {
+        return card.status === "Done";
     });
 
     console.log(cardsTodo);
-    // console.log(cardsDoing);
+    console.log(cardsDoing);
+    console.log(cardsDone);
 
     return (
         <div>
