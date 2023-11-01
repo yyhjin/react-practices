@@ -10,7 +10,13 @@ function App() {
                 props04={{ no: 1, name: "둘리" }}
                 props05={["javascript", "react", "es6"]}
                 props06={() => "함수"}
-                props07={true}
+                props07={10}
+                props08={[true, false, false]}
+                props09={{
+                    no: 10,
+                    name: "마이콜",
+                    email: "michol@gmail.com",
+                }}
             />
         </div>
     );
