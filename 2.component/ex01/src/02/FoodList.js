@@ -15,13 +15,15 @@ function FoodList({ foods }) {
 
     return (
         <ul>
-            {foods.map((food) => (
-                <FoodListItem
-                    key={food.no}
-                    name={food.name}
-                    count={food.count}
-                />
-            ))}
+            {foods.map(function (food) {
+                return (
+                    <FoodListItem
+                        key={food.no}
+                        name={food.name}
+                        count={food.count}
+                    />
+                );
+            })}
         </ul>
     );
 }

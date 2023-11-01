@@ -6,8 +6,10 @@ ex01: property
 3.  자식에서 변경 불가
 4.  부모가 소유한 데이터 
 
-src/01: 함수 컴포넌트
-src:02: Data Flow
+src/01: 함수 컴포넌트의 property
+src/02: Data Flow
+src/03: 클래스 컴포넌트의 property
+src/04: Property Validation
 
 ====================================================================================
 
