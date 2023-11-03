@@ -1,7 +1,7 @@
 {
-  "name": "ex02",
+  "name": "ex03",
   "version": "1.0.0",
-  "description": "",
+  "description": "ex02: Component Styling\r 1) inline styling\r 2) Normal CSS\r    - css-loader option: {module: false}\r    - 실행\r      $ npm run debug src=02 css-module=false",
   "main": "index.js",
   "scripts": {
     "debug": "npx webpack serve --progress --env",
