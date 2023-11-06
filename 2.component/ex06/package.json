@@ -1,0 +1,13 @@
+{
+    "name": "ex06",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "1. Never Manupulate Component's state DIRECTLY!\r 2. Treat Component's State As If It were IMMUTABLE!\r 3. Always Use the setState or Method returned by useState Hook to Update the State of Ccomponent!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
