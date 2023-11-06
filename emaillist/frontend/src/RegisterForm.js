@@ -1,9 +1,22 @@
 import React from "react";
 import styles from "./assets/scss/RegisterForm.scss";
 
-function RegisterForm(props) {
+function RegisterForm({ addEmail }) {
     return (
-        <form className={styles.RegisterForm}>
+        <form
+            className={styles.RegisterForm}
+            onSubmit={(e) => {
+                e.preventDefault();
+
+                const email = {
+                    firstName: e.target.firstName.value,
+                    lastName: e.target.lastName.value,
+                    email: e.target.email.value,
+                };
+
+                addEmail(email);
+            }}
+        >
             <input
                 type="text"
                 name="firstName"

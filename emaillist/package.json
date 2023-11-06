@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@babel/plugin-syntax-throw-expressions": "^7.22.5",
+    "@babel/plugin-transform-runtime": "^7.23.2"
+  },
+  "dependencies": {
+    "react-addons-update": "^15.6.3"
+  }
+}

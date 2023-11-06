@@ -1,0 +1,45 @@
+# spring configuration
+spring:
+   application:
+      name: emaillist
+   
+   # devtools - live reload
+   devtools:
+      livereload:
+         enabled: true
+   
+   # mvc
+   mvc:
+      static-path-pattern: /assets/**
+      throw-exception-if-no-handler-found: true
+   
+   # datasource
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.0.175:3307/webdb?charset=utf8
+      username: webdb
+      password: webdb123
+      hikari:
+         minumum-idle: 10
+         maximum-pool-size: 20
+
+# mybatis
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+   
+
+# server
+server:
+   port: 8080
+   servlet:
+      context-path: /
+      encodeing:
+         charset: utf-8
+         enabled: true
+         
+# logging
+logging:
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   level:
+      root: INFO
