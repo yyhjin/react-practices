@@ -7,19 +7,18 @@
 		<choose>
 			<when test="keyword == null or keyword ==''">
 				<![CDATA[
-				  select no, first_name, last_name, email
-				    from emaillist 
-		        order by no desc
+				select no, first_name, last_name, email
+				from emaillist 
+				order by no desc
 				]]>
 			</when>
 			<otherwise>
 				<![CDATA[
-				  select no, first_name, last_name, email
-				    from emaillist
-				   where first_name like '%${keyword}%'
-				      or last_name like '%${keyword}%'
-				      or email like '%${keyword}%'  
-		        order by no desc
+				select no, first_name, last_name, email
+				from emaillist
+				where concat(first_name, last_name like) like '%${keyword}%'
+				or email like '%${keyword}%'  
+				order by no desc
 				]]>
 			</otherwise>
 		</choose>
@@ -28,7 +27,7 @@
 	<insert id="insert" parameterType="emaillistvo">
 		<![CDATA[
 		insert
-		  into emaillist
+		into emaillist
 		values (null, #{firstName }, #{lastName }, #{email })
 		]]>
 		<selectKey keyProperty="no" resultType="long" order="AFTER">
