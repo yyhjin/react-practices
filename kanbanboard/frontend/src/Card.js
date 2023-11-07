@@ -30,3 +30,5 @@ const Card = ({ no, title, description, tasks }) => {
         </div>
     );
 };
+
+export default Card;
