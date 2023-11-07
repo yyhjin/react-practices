@@ -3,12 +3,26 @@
 
 <mapper namespace="emaillist">
 	
-	<select id="findAll" resultType="emaillistvo">
-		<![CDATA[
-		  select no, first_name, last_name, email
-		    from emaillist 
-        order by no desc
-		]]>
+	<select id="findAll" resultType="emaillistvo" parameterType="string">
+		<choose>
+			<when test="keyword == null or keyword ==''">
+				<![CDATA[
+				  select no, first_name, last_name, email
+				    from emaillist 
+		        order by no desc
+				]]>
+			</when>
+			<otherwise>
+				<![CDATA[
+				  select no, first_name, last_name, email
+				    from emaillist
+				   where first_name like '%${keyword}%'
+				      or last_name like '%${keyword}%'
+				      or email like '%${keyword}%'  
+		        order by no desc
+				]]>
+			</otherwise>
+		</choose>
 	</select>
 
 	<insert id="insert" parameterType="emaillistvo">
@@ -17,5 +31,10 @@
 		  into emaillist
 		values (null, #{firstName }, #{lastName }, #{email })
 		]]>
+		<selectKey keyProperty="no" resultType="long" order="AFTER">
+			<![CDATA[
+			select last_insert_id()
+			]]>		
+		</selectKey>
 	</insert>
 </mapper>

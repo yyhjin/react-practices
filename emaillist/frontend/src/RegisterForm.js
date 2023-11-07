@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./assets/scss/RegisterForm.scss";
 
 function RegisterForm({ addEmail }) {
+    const refForm = useRef(null);
+
     return (
         <form
+            ref={refForm}
             className={styles.RegisterForm}
             onSubmit={(e) => {
                 e.preventDefault();
@@ -15,6 +18,7 @@ function RegisterForm({ addEmail }) {
                 };
 
                 addEmail(email);
+                refForm.current.reset();
             }}
         >
             <input

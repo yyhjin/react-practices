@@ -7,32 +7,37 @@ import Emaillist from "./Emaillist";
 
 function App() {
     const [emails, setEmails] = useState(null);
-    const searchEmail = (keyword) => {
-        const newEmails = data.filter(
-            (email) =>
-                email.firstName.indexOf(keyword) !== -1 ||
-                email.lastName.indexOf(keyword) !== -1 ||
-                email.email.indexOf(keyword) !== -1
-        );
-        setEmails(newEmails);
-    };
 
     const addEmail = async (email) => {
-        console.log(email);
-        fetch("/api", {
-            method: "post",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify(email),
-        });
-        fetchList();
-    };
-
-    const fetchList = async () => {
         try {
             const response = await fetch("/api", {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(email),
+            });
+
+            if (!response.ok) {
+                throw new Error(`${response.status} ${response.statusText}`);
+            }
+
+            const json = await response.json();
+
+            if (json.result !== "success") {
+                throw new Error(`${json.result} ${json.message}`);
+            }
+
+            setEmails([json.data, ...emails]);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const fetchEmails = async (keyword) => {
+        try {
+            const response = await fetch(`/api?kw=${keyword ? keyword : ""}`, {
                 method: "get",
                 headers: {
                     "Content-Type": "application/json",
@@ -51,7 +56,6 @@ function App() {
                 throw new Error(`${json.result} ${json.message}`);
             }
 
-            console.log(json.data);
             setEmails(json.data);
         } catch (err) {
             console.error(err);
@@ -59,13 +63,13 @@ function App() {
     };
 
     useEffect(() => {
-        fetchList();
+        fetchEmails();
     }, []);
 
     return (
         <div id={"App"}>
             <RegisterForm addEmail={addEmail} />
-            <SearchBar searchEmail={searchEmail} />
+            <SearchBar fetchEmails={fetchEmails} />
             {emails === null ? null : <Emaillist emails={emails} />}
         </div>
     );
