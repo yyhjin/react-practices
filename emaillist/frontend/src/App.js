@@ -6,6 +6,7 @@ import Emaillist from "./Emaillist";
 // import data from './assets/json/data';
 
 function App() {
+    console.log("안녕!");
     const [emails, setEmails] = useState(null);
 
     const addEmail = async (email) => {
