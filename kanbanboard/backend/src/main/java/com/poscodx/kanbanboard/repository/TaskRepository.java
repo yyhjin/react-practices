@@ -22,8 +22,6 @@ public class TaskRepository {
 	public Boolean insert(TaskVo taskVo) {
 		return sqlSession.insert("task.insert", taskVo) == 1;
 	}
-	
-
 
 	public Boolean updateDone(Long no, String done) {
 		return sqlSession.update("task.updateDone", new HashMap<String, Object>() {{
