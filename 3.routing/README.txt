@@ -5,9 +5,9 @@ ex02: React Router Basic II: HTML5 history API
 ex03: React Router Basic III: HashRouter &amp; BrowserRouter
 ex04: React Router Basic V: Link VS NavLink
 ex05: Styling &amp; Semantic Markup
-ex06: Composition
-ex07: Nesting Routes
-ex08: BrowserRouter & SSR
+ex06: Composition   ({children})
+ex07: Nesting Routes(<Outlet/>)
+ex08: useRoute
 
 ===============================================================================
 
