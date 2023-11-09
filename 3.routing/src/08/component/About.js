@@ -1,13 +1,18 @@
 import React from 'react';
-import {SiteLayout} from "../layout";
 import styles from '../assets/scss/component/About.scss';
+import {useNavigate} from 'react-router';
 
 export default function About() {
+    const navigate = useNavigate();
+
+    setTimeout(() => {
+        // window.location.href = "/error";
+        navigate("/error");
+    }, 3000);
+
     return (
-        <SiteLayout>
             <div className={styles.About}>
                 <h2>kickscar 입니다.</h2>
             </div>
-        </SiteLayout>
     );
 }

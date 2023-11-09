@@ -1,15 +1,11 @@
 import React from 'react';
-import {SiteLayout} from "../../layout";
-
-export default function Gallery() {
+export default function Login() {
     return (
-        <SiteLayout>
             <div>
                 <h2 style={{
                     lineHeight: '200px',
                     textAlign: 'center'
-                }}>Whoops - 404 Not Found</h2>
+                }}>User - Login</h2>
             </div>
-        </SiteLayout>
     );
 }
