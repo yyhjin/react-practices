@@ -35,3 +35,4 @@
     - 실행서버(ssh server) 등록: springboot-publish-server
     - 프로젝트의 빌드 후 조치(post-build action)의 Send build artifacts over SSH 설정
         1. emaillist.jar: transfer
+        2. launch.sh: transfer + execution

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-APPLICATION_NAME=kanbanboard07
+APPLICATION_NAME=kanbanboard
 SCRIPT_DIR=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 PID=$(ps -ef | grep java | grep $APPLICATION_NAME.jar | awk '{print $2}')
 
